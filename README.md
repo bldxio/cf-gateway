@@ -25,16 +25,12 @@ This repository is meant for use in conjunction with [Cortex-Publisher](https://
 
     - RESOLVER
     - RESOLVER-PREVIEW
-    - ZONES
-    - ZONES-PREVIEW
 
    To create the KV namespaces, you must have Wrangler CLI installed then run the following commands in your console. Make sure to record the output ID's for each KV namespace as they are needed for use in a later step.
 
     ```console
         wrangler kv:namespace create "RESOLVER"
         wrangler kv:namespace create "RESOLVER" --preview
-        wrangler kv:namespace create "ZONE"
-        wrangler kv:namespace create "ZONE" --preview
 
     ```
 
@@ -48,24 +44,16 @@ This repository is meant for use in conjunction with [Cortex-Publisher](https://
 
     - __*CLOUDFLARE_API_TOKEN*__: The API token associated to your Cloudflare account.
     - __*CLOUDFLARE_ACCOUNT_ID*__: The ID of your Cloudflare account.
-    - __*CLOUDFLARE_ZONE_ID*__: The Zone ID of the domain you wish to target.
-    - __*CLOUDFLARE_ROUTE_PATTERN*__: The pattern of the route you wish to use for your worker. Example: hello.example.come/*
     - __*RESOLVER_KV_ID*__: The ID of the RESOLVER KV you created in the previous step
     - __*RESOLVER_KV_PREVIEW_ID*__: The ID of the RESOLVER_PREVIEW KV you created in the previous step.
-    - __*ZONES_KV_ID*__: The ID of the ZONES KV you create in the previous step.
-    - __*ZONES_KV_PREVIEW_ID*__: The ID of the ZONES-PREVIEW KV you created in the previous.
 
     __*Note*__: You may also use the Github CLI to accomplish the same.
 
     ```console
         gh secret set REPO_OWNER/REPO_NAME <__*CLOUDFLARE_API_TOKEN*__>
         gh secret set REPO_OWNER/REPO_NAME <__*CLOUDFLARE_ACCOUNT_ID*__>
-        gh secret set REPO_OWNER/REPO_NAME <__*CLOUDFLARE_ZONE_ID*__>
-        gh secret set REPO_OWNER/REPO_NAME <__*CLOUDFLARE_ROUTE_PATTERN*__>
         gh secret set REPO_OWNER/REPO_NAME <__*RESOLVER_KV_ID*__>
         gh secret set REPO_OWNER/REPO_NAME <__*RESOLVER_KV_PREVIEW_ID*__>
-        gh secret set REPO_OWNER/REPO_NAME <__*ZONES_KV_ID*__>
-        gh secret set REPO_OWNER/REPO_NAME <__*ZONES_KV_PREVIEW_ID*__>
     ```
 
 4. Navigate to the initial failed workflow from [deployment step 1](#deployment) in Github Actions and click the "Re-run jobs" dropdown and "Re-run all jobs" selection. The Github workflow will re-run and deploy the cloudflare worker to your account.
