@@ -1,0 +1,19 @@
+name: Lint
+on:
+  workflow_call: null
+jobs:
+## Lint Gateway
+  lint_gateway:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+          cache: yarn
+          cache-dependency-path: './gateway/yarn.lock'
+      - run: |
+          cd gateway
+          yarn install --frozen-lockfile
+          yarn run eslint
+          yarn run prettier "src/*.ts"
