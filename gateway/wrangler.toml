@@ -10,41 +10,17 @@ kv_namespaces = [
   { binding = "RESOLVER", id = "__RESOLVER_KV_ID__", preview_id = "__RESOLVER_KV_PREVIEW_ID__" }
 ]
 
-[env.hmn]
-route = "*.hmn.link/*"
-vars = { DEPTH = 1, GATEWAY = 'hmn.link' }
+[env.staging]
+route = "__STAGING_ROUTE_PATTERN__"
+vars = { DEPTH = 1, GATEWAY = '__STAGING_ROUTE_FQDN__' }
 
 kv_namespaces = [
   { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
 ]
 
-[env.ape]
-route = "*.ape.cloud/*"
-vars = { DEPTH = 1, GATEWAY = 'ape.cloud' }
-
-kv_namespaces = [
-  { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
-]
-
-[env.cardfi]
-route = "*.cardfi.info/*"
-vars = { DEPTH = 1, GATEWAY = 'cardfi.info' }
-
-kv_namespaces = [
-  { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
-]
-
-[env.bldx]
-route = "*.bldx.one/*"
-vars = { DEPTH = 1, GATEWAY = 'bldx.one' }
-
-kv_namespaces = [
-  { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
-]
-
-[env.pepe]
-route = "*.pepe.fans/*"
-vars = { DEPTH = 1, GATEWAY = 'pepe.fans' }
+[env.production]
+route = "__PRODUCTION_ROUTE_PATTERN__"
+vars = { DEPTH = 1, GATEWAY = '__PRODUCTION_ROUTE_FQDN' }
 
 kv_namespaces = [
   { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
