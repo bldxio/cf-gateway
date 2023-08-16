@@ -1,12 +1,12 @@
 # Cloudflare Gateway
 
-This repository is meant for use in conjunction with [Cortex-Publisher](https://github.com/crtxio/cortex-publisher)
+This repository is meant for use in conjunction with [Cortex-Publisher](https://github.com/crtxio/cortex-publisher). The cf-gateway Cloudflare worker serves as the gateway for your Cortex-Publisher.
 
 ## Prerequisites
 
-1. First you must have created a Cloudflare account, and purchased a domain for use with Cloudflare. You may do this [through Cloudflare directly](https://developers.cloudflare.com/registrar/get-started/register-domain/#how-to-register-a-new-domain), or use external registrars such as [Namecheap](https://www.namecheap.com/). If you have a Cloudflare account and domain you may proceed to adding the domain as a site to Cloudflare. This will populate the domain's Zone ID for use in later steps. For more information on how to setup your domain in Cloudflare please visit [Add site to Cloudflare](https://developers.cloudflare.com/fundamentals/get-started/setup/add-site/).
+1. First you must have followed and successfully deployed the [Cortex-Publisher](https://github.com/crtxio/cortex-publisher).
 
-2. Create a Cloudflare API Token. For more information on how create and use API tokens for use in CI/CD please visit [Create a Cloudflare API token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#create-a-cloudflare-api-token).
+2. Create a Cloudflare API Token. For more information on how create and use API tokens for use in CI/CD please visit [Create a Cloudflare API token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#create-a-cloudflare-api-token). If you have already completed this from deploying the [Cortex-Publisher](https://github.com/crtxio/cortex-publisher) then you may skip this step.
 
 3. Install the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/).
 
@@ -19,7 +19,7 @@ This repository is meant for use in conjunction with [Cortex-Publisher](https://
     - This will bring you to a web page requiring your Cloudflare account ID and API Token that you created from the previous step.
     - You will also be linked to the newly forked repository to enable Github Workflows. For more information on workflows pleas visit Github's [About workflows](https://docs.github.com/en/actions/using-workflows/about-workflows).
 
-    __*Note*__: This will run an initialworkflow that will fail by design as you do not currently have the remaining information populated for a clean deployment. Updates to come on this part of the deployment process in the future.
+    __*Note*__: This will run an initial workflow that will fail by design as you do not currently have the required Github actions secrets populated for a clean deployment. Updates to come on this part of the deployment process in the future.
 
 2. Create the following KV namespaces in your Cloudflare account.
 
