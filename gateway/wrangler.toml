@@ -4,48 +4,48 @@ compatibility_date = "2022-11-13"
 
 account_id = "__CLOUDFLARE_ACCOUNT_ID__"
 workers_dev = true
-vars = { DEPTH = 2 }
+vars = { DEPTH = 2, TLDS = ['hmn', 'ape', 'cardfi', 'bldx', 'pepe'] }
 
 kv_namespaces = [
   { binding = "RESOLVER", id = "__RESOLVER_KV_ID__", preview_id = "__RESOLVER_KV_PREVIEW_ID__" }
 ]
 
-[env.hmn]
-route = "*.hmn.link/*"
-vars = { DEPTH = 1, GATEWAY = 'hmn.link' }
+# [env.hmn]
+# route = "*.hmn.link/*"
+# vars = { DEPTH = 1, GATEWAY = 'hmn.link' }
 
-kv_namespaces = [
-  { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
-]
+# kv_namespaces = [
+#   { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
+# ]
 
-[env.ape]
-route = "*.ape.cloud/*"
-vars = { DEPTH = 1, GATEWAY = 'ape.cloud' }
+# [env.ape]
+# route = "*.ape.cloud/*"
+# vars = { DEPTH = 1, GATEWAY = 'ape.cloud' }
 
-kv_namespaces = [
-  { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
-]
+# kv_namespaces = [
+#   { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
+# ]
 
-[env.cardfi]
-route = "*.cardfi.info/*"
-vars = { DEPTH = 1, GATEWAY = 'cardfi.info' }
+# [env.cardfi]
+# route = "*.cardfi.info/*"
+# vars = { DEPTH = 1, GATEWAY = 'cardfi.info' }
 
-kv_namespaces = [
-  { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
-]
+# kv_namespaces = [
+#   { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
+# ]
 
-[env.bldx]
-route = "*.bldx.one/*"
-vars = { DEPTH = 1, GATEWAY = 'bldx.one' }
+# [env.bldx]
+# route = "*.bldx.one/*"
+# vars = { DEPTH = 1, GATEWAY = 'bldx.one' }
 
-kv_namespaces = [
-  { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
-]
+# kv_namespaces = [
+#   { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
+# ]
 
-[env.pepe]
-route = "*.pepe.fans/*"
-vars = { DEPTH = 1, GATEWAY = 'pepe.fans' }
+# [env.pepe]
+# route = "*.pepe.fans/*"
+# vars = { DEPTH = 1, GATEWAY = 'pepe.fans' }
 
-kv_namespaces = [
-  { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
-]
+# kv_namespaces = [
+#   { binding = "RESOLVER", id = "__RESOLVER_KV_ID__" }
+# ]

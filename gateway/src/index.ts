@@ -4,6 +4,7 @@ import { toHex, nh } from './utils'
 interface Env {
   DEPTH: number
   RESOLVER: KVNamespace
+  TLD: Array<string>
 }
 
 const e404 = `
@@ -54,10 +55,12 @@ export default {
     _ctx: ExecutionContext
   ): Promise<Response> {
     const reflare = await useReflare()
-    const { DEPTH, RESOLVER } = env
+    const { DEPTH, RESOLVER, TLD } = env
 
     const url = new URL(request.url)
     const fqn = url.host.split('.').slice(0, (DEPTH * -1)).join('.')
+    const tld = fqn.split('.').slice(0, -1).join('.')
+    if (!TLD.includes(tld)) return err404(fqn)
     const namehash = toHex(nh(fqn))
 
     const { owner }: { owner?: string }
