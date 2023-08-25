@@ -1,5 +1,5 @@
 name = "gateway"
-main = "src/index.ts"
+main = "gateway/src/index.ts"
 compatibility_date = "2022-11-13"
 
 account_id = "__CLOUDFLARE_ACCOUNT_ID__"
