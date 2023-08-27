@@ -21,7 +21,7 @@ This repository is meant for use in conjunction with [Cortex-Publisher](https://
 
     __*Note*__: This will run an initial workflow that will fail by design as you do not currently have the required Github actions secrets populated for a clean deployment. Updates to come on this part of the deployment process in the future.
 
-2. Create the following KV namespaces in your Cloudflare account.
+2. Create the following KV namespaces in your Cloudflare account. If you have deployed the [Cortex-Publisher](https://github.com/crtxio/cortex-publisher) you will have already created these KV stores and may skip this step.
 
     - RESOLVER
     - RESOLVER-PREVIEW
