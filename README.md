@@ -6,7 +6,7 @@ This repository is meant for use in conjunction with [Cortex-Publisher](https://
 
 1. First you must have followed and successfully deployed the [Cortex-Publisher](https://github.com/crtxio/cortex-publisher).
 
-2. Create a Cloudflare API Token. For more information on how create and use API tokens for use in CI/CD please visit [Create a Cloudflare API token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#create-a-cloudflare-api-token). If you have already completed this from deploying the [Cortex-Publisher](https://github.com/crtxio/cortex-publisher) then you may skip this step.
+2. Create a Cloudflare API Token. For more information on how create and use API tokens for use in CI/CD please visit [Create a Cloudflare API token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#create-a-cloudflare-api-token). If you have already created a Cloudflare API Token from deploying the [Cortex-Publisher](https://github.com/crtxio/cortex-publisher) then you may skip this step.
 
 3. Install the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/).
 
