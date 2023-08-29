@@ -31,7 +31,7 @@ jobs:
           path: ~/.cache/yarn
           key: ${{ runner.os }}-yarn-${{ hashFiles('./yarn.lock') }}  # Cache key includes the OS and the yarn.lock file
       - name: Deploy to Cloudflare Account
-        # CRTX specific secrets
+        # Env vars are set in the repo settings
         env: 
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           RESOLVER_KV_ID: ${{ secrets.RESOLVER_KV_ID }}
